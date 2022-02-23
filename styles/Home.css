@@ -62,7 +62,7 @@
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+    Bitstream Vera Sans Mono, Courier New;
 }
 
 .grid {
@@ -86,10 +86,14 @@
 }
 
 .card:hover,
-.card:focus,
+.grid:has(:focus) .card,
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
+}
+
+.card:has(.cardTitle) {
+  background-color: red;
 }
 
 .card h2 {
